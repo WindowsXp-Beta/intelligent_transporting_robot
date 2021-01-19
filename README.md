@@ -39,7 +39,7 @@
 
 2. `git clone ssh (or URl)` 将本仓库clone至本地。（你可能需要先`Add SSH Key`到你的账户中，具体见[远程仓库设置](https://www.liaoxuefeng.com/wiki/896043488029600/896954117292416)）
 
-   [![sgYn2T.png](https://s3.ax1x.com/2021/01/19/sgYn2T.png)](https://imgchr.com/i/sgYn2T)
+   <img src="https://s3.ax1x.com/2021/01/19/sgYn2T.png" style="zoom:30%">
 
    ssh 和 url 获取方式
 
@@ -52,12 +52,12 @@
 #### vscode&github: 
 0. 用vscode打开一个git的仓库。（它可以来自本地的git init或是远程git clone的）
 1. 比如我对某个文件做了一点修改，那么当我保存后。在这会提示现有的更改。
-   [![sgDNW9.png](https://s3.ax1x.com/2021/01/19/sgDNW9.png)](https://imgchr.com/i/sgDNW9)
+   <img src="https://s3.ax1x.com/2021/01/19/sgDNW9.png" style="zoom:30%">
 2. 点击 + 号，会将更改加入暂存区。（也就是git add的效果）
-   [![sgrY0f.png](https://s3.ax1x.com/2021/01/19/sgrY0f.png)](https://imgchr.com/i/sgrY0f)
+   <img src="https://s3.ax1x.com/2021/01/19/sgrY0f.png" style="zoom:30%">
 3. 在上图中的`消息`框中输入对暂存修改的解释，再点击 :white_check_mark:，则完成了一次commit，及类似与commit -m "explanation"
 4. 最后，在vscode的左下角可以看到 `0 ↓ 1 ↑`这意味着，远端有 0 个commit需要pull，本地有 1 个commit可以push，此时单击一下那个像旋转一样的键就可以完成`git push`
-   [![sgcLqI.png](https://s3.ax1x.com/2021/01/19/sgcLqI.png)](https://imgchr.com/i/sgcLqI)
+   <img src="https://s3.ax1x.com/2021/01/19/sgcLqI.png" style="zoom:30%">
 #### git tutorial
 
 1. [Missing semester of your CS education](https://missing.csail.mit.edu)
