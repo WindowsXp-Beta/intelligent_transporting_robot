@@ -34,7 +34,8 @@
 2. 点击 + 号，会将更改加入暂存区。（也就是git add的效果）
    [![sgrY0f.png](https://s3.ax1x.com/2021/01/19/sgrY0f.png)](https://imgchr.com/i/sgrY0f)
 3. 在上图中的`消息`框中输入对暂存修改的解释，再点击 :white_check_mark:，则完成了一次commit，及类似与commit -m "explanation"
-4. 
+4. 最后，在vscode的左下角可以看到 `0 ↓ 1 ↑`这意味着，远端有 0 个commit需要pull，本地有 1 个commit可以push，此时单击一下那个像旋转一样的键就可以完成`git push`
+   [![sgcLqI.png](https://s3.ax1x.com/2021/01/19/sgcLqI.png)](https://imgchr.com/i/sgcLqI)
 #### git tutorial
 
 1. [Missing semester of your CS education](https://missing.csail.mit.edu)
