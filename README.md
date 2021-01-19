@@ -27,3 +27,17 @@
 
 当然如果你不太熟悉命令行，那么利用github和vscode的的GUI也可以完成这些事。具体参照github的[hello world guide](https://guides.github.com/activities/hello-world/)
 
+#### git tutorial
+
+1. [Missing semester of your CS education](https://missing.csail.mit.edu)
+
+   MIT的一门课，讲了一些常用的工具的使用，比如shell、vim等，git是其中一节，B站上也有课程视频。
+
+2. [Git-scm.com](https://git-scm.com)
+
+   Git的官网，里面有documention，有十分详细的资料
+
+3. [廖雪峰的git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+
+   比较浅显易懂，跟着做一遍基本的命令就差不多都知道了
+
