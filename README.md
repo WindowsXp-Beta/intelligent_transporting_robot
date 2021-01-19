@@ -27,6 +27,14 @@
 
 当然如果你不太熟悉命令行，那么利用github和vscode的的GUI也可以完成这些事。具体参照github的[hello world guide](https://guides.github.com/activities/hello-world/)
 
+#### vscode&github: 
+0. 用vscode打开一个git的仓库。（它可以来自本地的git init或是远程git clone的）
+1. 比如我对某个文件做了一点修改，那么当我保存后。在这会提示现有的更改。
+   [![sgDNW9.png](https://s3.ax1x.com/2021/01/19/sgDNW9.png)](https://imgchr.com/i/sgDNW9)
+2. 点击 + 号，会将更改加入暂存区。（也就是git add的效果）
+   [![sgrY0f.png](https://s3.ax1x.com/2021/01/19/sgrY0f.png)](https://imgchr.com/i/sgrY0f)
+3. 在上图中的`消息`框中输入对暂存修改的解释，再点击 :white_check_mark:，则完成了一次commit，及类似与commit -m "explanation"
+4. 
 #### git tutorial
 
 1. [Missing semester of your CS education](https://missing.csail.mit.edu)
