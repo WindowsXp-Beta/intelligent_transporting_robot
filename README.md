@@ -1,4 +1,5 @@
 ## 上海市工程训练综合能力竞赛--智能搬运机器人
+---
 ### group member :
 组员|分工
 ---|---
@@ -7,6 +8,27 @@
 黄凯|运动控制(STM32)
 魏新鹏|识别，顶层处理(raspberry pi)
 
+### 比赛链接
+[智能+赛道 命题评分要求](http://www.gcxl.edu.cn/new/index_file2.html)
+[第7届工训赛“智能+赛道”评分标准](https://mp.weixin.qq.com/s/R4Q5RDkqcPM0G6eyYqo40w)
+### To-Do list
+#### raspberry pi
+- [ ] 颜色识别
+  - [x] demo
+  - [ ] 最远距离测试
+- [ ] 二维码扫描
+  - [x] demo
+  - [ ] 距离测试
+  - [ ] 偏移角度测试
+- [ ] WIFI通信
+- [ ] 与STM32间的串口通信
+- [ ] LED屏展示
+#### STM32
+- [ ] 红外循线
+- [ ] 陀螺仪
+- [ ] 舵机控制
+- [ ] 电机控制
+---
 ### github 使用
 
 > 如果之前未使用过git、github、gitlab等版本控制工具，建议先从github的[官方教程](https://guides.github.com/activities)开始，如果你十分熟悉github那么你完全可以跳过这节，甚至帮助修改这节​​ 
