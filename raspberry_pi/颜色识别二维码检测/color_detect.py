@@ -3,7 +3,7 @@ import numpy as np
 import imutils
 
 def rec(lower,upper):
-    camera = cv2.VideoCapture(1)
+    camera = cv2.VideoCapture(0)
     (ret,img) = camera.read()
     cv2.imshow('image1',img)
     img_hsv = cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
@@ -27,14 +27,14 @@ def rec(lower,upper):
     cv2.destroyAllWindows()
 
 def main():
-    green_low = [38,90,90]
-    green_upper = [75,255,255]
+    green_low = [35,90,90]
+    green_upper = [77,255,255]
 
-    red_low = [160,90,90]
-    red_upper = [179,255,255]
+    red_low = [0,90,90]
+    red_upper = [10,255,255]
 
-    blue_low = [75,90,90]
-    blue_upper = [130,255,255]
+    blue_low = [100,90,90]
+    blue_upper = [124,255,255]
 
     rec(green_low,green_upper)
     
