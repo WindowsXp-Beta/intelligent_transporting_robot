@@ -37,8 +37,8 @@ def QR_detect():
             if key_num == ord('q'):
                 break
             cv2.destroyAllWindows()
-        camera.release()
-        cv2.destroyAllWindows()
+    camera.release()
+    cv2.destroyAllWindows()
    
 def main():
     QR_detect()
