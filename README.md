@@ -71,4 +71,14 @@
 3. [廖雪峰的git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
 
    比较浅显易懂，跟着做一遍基本的命令就差不多都知道了
+#### 解决GitHub无法显示图片的问题
+原因：DNS污染
+解决方案：
+1. 找到无法打开的网址，比如右键问号图片，选择在新标签页中打开它，这时基本就会提示无法与XXX服务器建立安全链接
+2. 复制这段网址，比如`raw.githubusercontent.com`，在[IPAddress.com](https://www.ipaddress.com/)中找到这个网址的IP，比如上面那个网址的IP是199.232.96.133。
+3. For Windows:C:\Windows\System32\drivers\etc
+   For Mac/Linux:/etc/hosts
+   >修改该文件可能需要sudo
 
+   添加如下内容后保存即可：
+   199.232.68.133 raw.githubusercontent.com
