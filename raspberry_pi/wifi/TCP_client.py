@@ -13,6 +13,6 @@ while True:
     tcpCliSock.send(bytes(data, 'utf-8'))   #客户端发送消息，必须发送字节数组	
     data = tcpCliSock.recv(BUFSIZ)   #接收回应消息，接收到的是字节数组	
     if not data:   #如果接收服务器信息失败，或没有消息回应	
-        break	
+        break
     print(data.decode('utf-8'))  #打印回应消息，或者str(data,"utf-8")	
 tcpCliSock.close() #关闭客户端socket
