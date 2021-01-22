@@ -7,7 +7,8 @@
    >e.g. 一个公司申请了域名`comp.com`，这时候有一台主机名为web，则可以使用`web.comp.com`得到这个主机IP。若还有两台提供邮件和OA服务的主机cmail，oa，则这时候可以用以下FQDN：
    `cmail.comp.com`
    `oa.comp.com`
-5. Linux/MacOS下 /etc/hosts文件的配置
+5. NAT:同个公司，家庭，教师内主机对外通信时，把私有IP转换为公有IP地址。所以你使用百度搜索本机IP查到的IP是公网IP，而通过`设置`，`ifconfig`，`python socket`等得到的是局域网IP，也就是路由器给你分配的IP。
+6. Linux/MacOS下 /etc/hosts文件的配置
    `ip fqdn [alias]...`
    第一列为主机ip地址，第二列为主机fqdn地址，第三列以后为别名，可以省略，否则至少要包含hostname
 ### Python Socket
