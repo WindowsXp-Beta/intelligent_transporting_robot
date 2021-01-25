@@ -23,9 +23,12 @@
    **大于1m**
   - [x] 偏移角度测试
    **二维码平面与该平面到摄像头的连线呈45$^{\circ}$仍可识别**
-- [x] WIFI通信
+- [ ] WIFI通信
+  - [x] TCP server and client
+  - [x] UDP server and client
+  - [ ] 广播
 - [ ] 与STM32间的串口通信
-- [ ] LED屏展示
+- [ ] 屏幕显示
 #### STM32
 - [ ] 红外循线
 - [ ] 陀螺仪
