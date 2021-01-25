@@ -22,3 +22,4 @@ aliaslist【可能为空】是相同地址可供选择的主机名列表。ipadd
 4. `gethostbyaddr()`三元组：(hostname,aliaslist,ipaddrlist) 结果和gethostbyname_ex(hostname)一致。支持IPV4和IPV6.
 5. [What is Port](https://blog.csdn.net/cto_51/article/details/10086745)
 6. [127.0.0.1与localhost与本机IP的区别](https://blog.csdn.net/weixin_36185028/article/details/79855383)
+7. [使用shell/python获取hostname/fqdn释疑](https://www.cnblogs.com/fanzhidongyzby/archive/2016/01/24/5154443.html)
