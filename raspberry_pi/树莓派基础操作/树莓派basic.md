@@ -12,14 +12,14 @@
    连接：`ssh pi@IP`
    For my raspberry pi,the ip is :
    WIFI | IP
-   ---|---
+   :---:|:---:
    310|192.168.1.106
    sic-guest|172.18.29.248
    SJTU|169.254.230.168
 
    For the senior's
    WIFI|IP
-   ---|---
+   :---:|:---:
    sic-guest|172.18.25.201
    退出：`logout` or `exit`
 2. 网线直连
