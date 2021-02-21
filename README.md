@@ -29,6 +29,8 @@
   - [ ] 广播
 - [ ] 与STM32间的串口通信
 - [ ] 屏幕显示
+  - [ ] <a href="https://shumeipai.nxez.com/2017/09/13/solve-the-raspberry-pi-drive-oled-problem.html">oled</a>
+  - [ ] <a href="https://shumeipai.nxez.com/2020/06/17/raspberry-pi-drives-lcd1602-screen-through-i2c.html">lcd</a>
 #### STM32
 - [ ] 红外循线
 - [ ] 陀螺仪
