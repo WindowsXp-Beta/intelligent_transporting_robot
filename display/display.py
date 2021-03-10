@@ -1,4 +1,8 @@
-#/usr/bin/python
+<<<<<<< HEAD
+#!/usr/bin/python
+=======
+#!/usr/bin/python
+>>>>>>> refs/remotes/origin/main
 # -*- coding: UTF-8 -*-
 #import chardet
 import os
@@ -19,7 +23,11 @@ device = 0
 logging.basicConfig(level=logging.DEBUG)
 def draw_miss_code(draw, mis_code):
     logging.info("draw text")
-    Font3 = ImageFont.truetype("./Font/Font02.ttf",150)
+<<<<<<< HEAD
+    Font3 = ImageFont.truetype("../Font/Font02.ttf",150)
+=======
+    Font3 = ImageFont.truetype("../Font/Font02.ttf",150)
+>>>>>>> refs/remotes/origin/main
     draw.text((20, 0), mis_code[0], fill = "BLACK", font = Font3)
     draw.text((20, 150), mis_code[1], fill = "BLACk", font = Font3)
 
@@ -51,5 +59,10 @@ def main():
         logging.info("quit:")
         exit()
 
-if __name__ == '__main__':
+<<<<<<< HEAD
+if __name__ == "__main__":
     main()
+=======
+if __name__ == "__main__":
+    main()
+>>>>>>> refs/remotes/origin/main
