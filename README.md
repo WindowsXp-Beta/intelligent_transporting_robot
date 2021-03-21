@@ -28,11 +28,15 @@
   - [x] UDP server and client
   - [ ] 广播
 - [ ] 与STM32间的串口通信
+  
+  <a href="https://blog.csdn.net/m0_38106923/article/details/84330186">RXD TXD</a>
 - [ ] 屏幕显示
   - [ ] <a href="https://shumeipai.nxez.com/2017/09/13/solve-the-raspberry-pi-drive-oled-problem.html">oled</a>
   - [ ] <a href="https://shumeipai.nxez.com/2020/06/17/raspberry-pi-drives-lcd1602-screen-through-i2c.html">lcd</a>
 #### STM32
 - [ ] 红外循线
+- [ ] 路径规划
+- [ ] pid
 - [ ] 陀螺仪
 - [ ] 舵机控制
 - [ ] 电机控制
@@ -89,4 +93,4 @@
    >修改该文件可能需要sudo
 
    添加如下内容后保存即可：
-   199.232.68.133 raw.githubusercontent.com
+   199.232.68.133 `raw.githubusercontent.com`

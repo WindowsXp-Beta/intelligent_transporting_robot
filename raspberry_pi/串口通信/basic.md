@@ -6,6 +6,7 @@
 ## PC <=> raspberry
 MacOS:comtool
 raspberry pi:minicom
+![](https://img-blog.csdnimg.cn/20200301140255199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N3YXJtczEyMzk=,size_16,color_FFFFFF,t_70)
 关于串口：
 >树莓派从大的方向来说一共出了3代，每一代的CPU外设基本相同，但内核不同，外设里面一共包含两个串口，一个称之为硬件串口（/dev/ttyAMA0），一个称之为mini串口（/dev/ttyS0）。硬件串口由硬件实现，有单独的波特率时钟源，性能高、可靠，mini串口性能低，功能也简单，并且没有波特率专用的时钟源而是由CPU内核时钟提供，因此mini串口有个致命的弱点是：波特率受到内核时钟的影响。内核若在智能调整功耗降低主频时，相应的这个mini串口的波特率便受到牵连了，虽然你可以固定内核的时钟频率，但这显然不符合低碳、节能的口号。在所有的树莓派板卡中都通过排针将一个串口引出来了，目前除了树莓派3代以外 ，引出的串口默认是CPU的那个硬件串口。而在树莓派3代中，由于板载蓝牙模块，因此这个硬件串口被默认分配给与蓝牙模块通信了，而把那个mini串口默认分配给了排针引出的GPIO Tx Rx。
 
@@ -28,3 +29,8 @@ raspberry pi:minicom
 6. `/boot/config.txt`最后添加`dtoverlay=disable-bt`
 7. `sudo systemctl disable hciuart`
 8. 重启即可。
+9. 之后应将minicom设置为serial port setup=>A:/dev/ttyAMA0 E:9600(似乎波特率低点比较稳定) FG:No=>save setup as dfl（保存为默认设置）
+10. 注意树莓派的RxTx应连接usb转ttl的TxRx。
+
+代码编写
+[STM32与树莓派串口透传](https://blog.csdn.net/m0_38106923/article/details/84330186)
