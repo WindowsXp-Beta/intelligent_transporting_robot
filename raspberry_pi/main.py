@@ -1,4 +1,6 @@
 # coding=utf-8
+import sys
+sys.path.append("./display")
 from display.display import display
 import serial
 import time
@@ -82,6 +84,7 @@ def rec(lower,upper):#传入颜色的hsv区间
     return [sum_x, sum_y]
 
 def QR_detect():
+    print("begin QR\n")
     camera = cv2.VideoCapture(0)
     #count = 0
     while True:
@@ -100,6 +103,7 @@ def QR_detect():
            #print('signal\n')
            continue
         else:
+            print("QR_code detect\n")
             #print(barcodes)
             for barcode in barcodes:#有可能有多个二维码
                 (x,y,w,h) = barcode.rect
@@ -195,3 +199,6 @@ def main():
     #将摆放信息传回stm32
     com.send(top_order)
     com.send(bottom_order)
+    
+    
+main()

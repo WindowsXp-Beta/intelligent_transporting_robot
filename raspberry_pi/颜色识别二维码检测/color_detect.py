@@ -11,9 +11,9 @@ def rec(lower,upper):
     color_upper = np.array([upper[0],upper[1],upper[2]])
     mask = cv2.inRange(img_hsv,color_low,color_upper)
     cv2.imshow('image3',mask)
-    mask_mf = cv2.medianBlur(mask,7)
-    cv2.imshow('middlefilter',mask_mf)
-    cnts = cv2.findContours(mask_mf,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
+    #mask_mf = cv2.medianBlur(mask,7)
+    #cv2.imshow('middlefilter',mask_mf)
+    cnts = cv2.findContours(mask,cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
     cnts = imutils.grab_contours(cnts)
     for c in cnts:
         ((x,y),radius) = cv2.minEnclosingCircle(c)
@@ -27,11 +27,11 @@ def rec(lower,upper):
     cv2.destroyAllWindows()
 
 def main():
-    green_low = [35,90,90]
+    green_low = [40,90,90]
     green_upper = [77,255,255]
 
-    red_low = [0,90,90]
-    red_upper = [10,255,255]
+    red_low = [156,90,90]
+    red_upper = [180,255,255]
 
     blue_low = [100,90,90]
     blue_upper = [124,255,255]
