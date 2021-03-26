@@ -25,7 +25,7 @@ class display:
 
     def draw_miss_code(self, draw):
         logging.info("draw text")
-        Font3 = ImageFont.truetype("./Font/Font02.ttf",150)
+        Font3 = ImageFont.truetype("./display/Font/Font02.ttf",150)
         draw.text((20, 0), self.mis_code[0], fill = "BLACK", font = Font3)
         draw.text((20, 150), self.mis_code[1], fill = "BLACk", font = Font3)
 

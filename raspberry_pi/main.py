@@ -164,6 +164,7 @@ def QR_detect():
 def main():
     '''第一阶段：从出发区到二维码板的过程中，持续扫描，检测到二维码后停止扫描'''
     QR_detect()
+    print(QR_code)
     #检测到二维码后，将其显示在屏幕上
     show = display(QR_code)
     show.show()
