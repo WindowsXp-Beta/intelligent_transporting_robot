@@ -19,7 +19,7 @@ import pyzbar.pyzbar as pyzbar
 '''servo settings begin'''
 pan = 40 #di pan
 tilt = 38 #bi
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 GPIO.setup(tilt, GPIO.OUT)
 GPIO.setup(pan, GPIO.OUT)
@@ -163,6 +163,8 @@ def QR_detect():
 
 def main():
     '''第一阶段：从出发区到二维码板的过程中，持续扫描，检测到二维码后停止扫描'''
+    setServoAngle(pan, 10)
+    setServoAngle(tilt, 20)
     QR_detect()
     print(QR_code)
     #检测到二维码后，将其显示在屏幕上
