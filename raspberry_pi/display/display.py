@@ -55,3 +55,10 @@ class display:
             disp.module_exit()
             logging.info("quit:")
             exit()
+def main():
+    code = ['123', '321']
+    show = display(code)
+    show.show()
+
+if "__main__" == __name__:
+    main()

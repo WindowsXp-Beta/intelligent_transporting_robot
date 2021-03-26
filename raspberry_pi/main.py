@@ -1,4 +1,5 @@
 # coding=utf-8
+import os
 import sys
 sys.path.append("./display")
 from display.display import display
@@ -7,9 +8,34 @@ import time
 import cv2
 import numpy as np
 import imutils
+import logging
+import spidev as SPI
+import RPi.GPIO as GPIO
+from lib import LCD_2inch4
+from PIL import Image,ImageDraw,ImageFont
 import pyzbar.pyzbar as pyzbar
 
 '''global settings'''
+'''servo settings begin'''
+pan = 40 #di pan
+tilt = 38 #bi
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+GPIO.setup(tilt, GPIO.OUT)
+GPIO.setup(pan, GPIO.OUT)
+
+def setServoAngle(servo, angle):
+	#assert angle >=30 and angle <= 150
+	pwm = GPIO.PWM(servo, 50)
+	pwm.start(8)
+	dutyCycle = angle / 18. + 2.5
+	pwm.ChangeDutyCycle(dutyCycle)
+	time.sleep(0.3)
+	pwm.stop()
+'''servo settings end'''
+
+QR_code = ['', '']
+
 green_lower = [35,90,90]
 green_upper = [77,255,255]
 
@@ -19,18 +45,26 @@ red_upper = [10,255,255]
 blue_lower = [100,90,90]
 blue_upper = [124,255,255]
 
-QR_code = ''
-
 # 1 is red
 # 2 is green
 # 3 is blue
 top_order = []
 bottom_order = []
 
+
+'''display'''
+RST = 27
+DC = 25
+BL = 18
+bus = 0 
+device = 0
+'''display end'''
+'''global settings end'''
+
 class commuicator:
     def __init__(self):
         self.receive_info = ''
-        self.ser = serial.Serial('/dev/ttyAMA0', 9600)
+        self.ser = serial.Serial('/dev/ttyAMA0', 115200)
         self.Is_correct = False
 
     '''发送信息后 每隔0.1秒收取一次stm32发送的信息，如果与发送信息相同，不再发送'''
@@ -84,7 +118,8 @@ def rec(lower,upper):#传入颜色的hsv区间
     return [sum_x, sum_y]
 
 def QR_detect():
-    print("begin QR\n")
+    global QR_code
+    print("begin QR")
     camera = cv2.VideoCapture(0)
     #count = 0
     while True:
@@ -103,16 +138,18 @@ def QR_detect():
            #print('signal\n')
            continue
         else:
-            print("QR_code detect\n")
+            print("QR_code detect")
             #print(barcodes)
             for barcode in barcodes:#有可能有多个二维码
                 (x,y,w,h) = barcode.rect
                 cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),2)
                 barcodeDate = barcode.data.decode("utf-8")
-                QR_code = barcodeDate
+                QR_code[0] = barcodeDate[0]+barcodeDate[1]+barcodeDate[2]
+                QR_code[1] = barcodeDate[4]+barcodeDate[5]+barcodeDate[6]
                 #print(barcode.data)
                 #print(barcodeDate)
                 barcodeType = barcode.type
+        break
                 # text = "{}({})".format(barcodeDate,barcodeType)
                 # cv2.putText(img,text,(x,y-10),cv2.FONT_HERSHEY_SIMPLEX,0.5,(255,0,0),2)
                 # print("[INFO] Found {} barcode: {}".format(barcodeType,barcodeDate))
@@ -130,6 +167,8 @@ def main():
     #检测到二维码后，将其显示在屏幕上
     show = display(QR_code)
     show.show()
+    while True:
+        s = 1
     #并将其发送给stm32
     com = commuicator()
     com.send(QR_code)
@@ -200,5 +239,5 @@ def main():
     com.send(top_order)
     com.send(bottom_order)
     
-    
-main()
+if __name__ == "__main__":
+    main()
