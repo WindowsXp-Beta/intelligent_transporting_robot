@@ -1,4 +1,6 @@
 # Learn Python
+参考资料
+[菜鸟教程Python](https://www.runoob.com/python3/python3-tutorial.html)
 ## basic
 
 注释：#

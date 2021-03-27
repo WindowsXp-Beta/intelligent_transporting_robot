@@ -23,8 +23,10 @@
    sic-guest|172.18.25.201
    退出：`logout` or `exit`
 2. 网线直连
-   [树莓派+一根网线直连笔记本电脑](https://shumeipai.nxez.com/2013/10/15/raspberry-pi-and-a-network-cable-directly-connected-laptop.html)
-3. 远程桌面
+   [树莓派+一根网线直连笔记本电脑 For Windows](https://shumeipai.nxez.com/2013/10/15/raspberry-pi-and-a-network-cable-directly-connected-laptop.html)
+   [网线直连笔记本电脑 For Mac](https://blog.csdn.net/Iwanaabigdrumstick/article/details/68942556)
+3. [VNC viewer远程桌面](https://shumeipai.nxez.com/2018/08/31/raspberry-pi-vnc-viewer-configuration-tutorial.html)
+
 #### 安装OPENCV4.5.0记录
 1. 参考帖子：
    - [子豪兄教你在树莓派上安装OpenCV](https://www.jianshu.com/p/56929416b4a1)
